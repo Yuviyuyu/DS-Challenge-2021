@@ -16,9 +16,42 @@ from sklearn.preprocessing import PowerTransformer
 
 
 # # read data to dataframe
-# df_crime = pd.read_csv("nt_crime_statistics_jun_2021.csv") 
+df_crime = pd.read_csv("nt_crime_statistics_jul_2021.csv") 
 df_temp = pd.read_csv("IDCJAC0002_014015_Data12.xls")
 df_unemp = pd.read_csv("Unemployment rate-SA4 Time Series - September 2021.csv")
+
+
+# ~~~~~ Scatter for Crime Dataset ~~~~~
+
+# plot scatter - Month number 
+plt.scatter(df_crime['Month number'], df_crime['Number of offences'])
+plt.xlabel('Month number')
+plt.ylabel('Number of offences')
+plt.show()
+
+# plot scatter - Region
+plt.scatter(df_crime['Reporting region '], df_crime['Number of offences'])
+plt.xlabel('Reporting region')
+plt.ylabel('Number of offences')
+plt.show()
+
+# plot scatter - Offence category
+plt.scatter(df_crime['Number of offences'], df_crime['Offence category'])
+plt.xlabel('Number of offences')
+plt.ylabel('Offence category')
+plt.show()
+
+# plot scatter - Alcohol Iv
+plt.scatter(df_crime['Alcohol involvement'], df_crime['Number of offences'])
+plt.xlabel('Alcohol involvement')
+plt.ylabel('Number of offences')
+plt.show()
+
+# plot scatter - DV Iv
+plt.scatter(df_crime['DV involvement'], df_crime['Number of offences'])
+plt.xlabel('DV involvement')
+plt.ylabel('Number of offences')
+plt.show()
 
 
 # ~~~~ Wrangle Unemployment training Dataset ~~~~
